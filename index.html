@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Caption Generator Demo</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="caption-tool.vercel.app" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
   <h1>Caption Generator</h1>
@@ -60,5 +63,15 @@
   <footer>Thanks, we’ll contact you soon!</footer>
 
   <script src="script.js"></script>
+
+  <!-- Tracking clicks with Plausible -->
+  <script>
+    document.getElementById("buyBtn").addEventListener("click", () => {
+      plausible('click_pro_button');
+    });
+    document.getElementById("buyUltraBtn").addEventListener("click", () => {
+      plausible('click_ultra_button');
+    });
+  </script>
 </body>
 </html>
